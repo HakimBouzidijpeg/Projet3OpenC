@@ -5,14 +5,17 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/normalize.css"/>
-  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./sass/css/normalize.css"/>
+  <link rel="stylesheet" href="./sass/css/styles.css" />
+
   <script src="https://kit.fontawesome.com/9a7be0eac1.js" crossorigin="anonymous"></script>
   <title>OhMyFood-réservation de restaurant en ligne</title>
 </head>
-<body>
 
 
+<body class="accueil">
+
+<div class="format-page">
 <header>
    <h1> <img src="./images/logo/ohmyfood.png" alt="logo du site"></h1>
 
@@ -20,8 +23,8 @@
 </h1>
 <form action="#" method="">  <!--post ou get ?-->
 <i class="fas fa-map-marker-alt"></i>
-<input class="localisation" type="text" name="localisation" 
-id="localisation" placeholder=" Paris, Belleville">
+<input class="formulaire-texte" type="text" name="formulaire-texte" 
+id="formulaire-texte" placeholder=" Paris, Belleville">
 </form>
 
 </header>
@@ -40,9 +43,9 @@ id="localisation" placeholder=" Paris, Belleville">
 <section> <!--section fonctionnement-->
     <h2>fonctionnement</h2>
     <ol>
-        <li>Choisissez un restaurant</li>
-        <li>Composez votre menu</li>
-        <li>Dégustez au restaurant</li>
+        <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+        <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
+        <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
     </ol>
 </section>
 
@@ -86,8 +89,9 @@ id="localisation" placeholder=" Paris, Belleville">
 <li>Mentions légales</li>
 <li>Contact</li>
 </ul>
-</footer>
 
+</footer>
+</div>
 </body>
 
 </html>

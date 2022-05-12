@@ -1,0 +1,23 @@
+{
+  "name": "projet3oc",
+  "version": "1.0.0",
+  "description": "projet3OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/scss/main.scss:./sass/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/HakimBouzidijpeg/Projet3OpenC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HakimBouzidijpeg/Projet3OpenC/issues"
+  },
+  "homepage": "https://github.com/HakimBouzidijpeg/Projet3OpenC#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+
+}
