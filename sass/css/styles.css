@@ -1,67 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
-.page-format {
-  width: 100%;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 50 |       background:$info-fond;
+ *    |                  ^^^^^^^^^^
+ *    '
+ *   sass\scss\base\_base.scss 50:18  @import
+ *   sass\scss\main.scss 1:9          root stylesheet */
 
-a {
-  text-decoration: none;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 50 \2502        background:$info-fond;\d\a    \2502                   ^^^^^^^^^^\a    \2575 \a   sass\\scss\\base\\_base.scss 50:18  @import\a   sass\\scss\\main.scss 1:9          root stylesheet";
 }
-
-img {
-  width: 200px;
-}
-
-* {
-  padding-inline-start: 0px;
-}
-
-html {
-  font-size: 15px;
-  font-family: "Roboto";
-}
-
-header {
-  text-align: center;
-  position: relative;
-  height: auto;
-}
-
-h1 {
-  padding-top: 10px;
-  padding-bottom: 5px;
-  display: inline-block;
-}
-
-/*formulaire*/
-.accueil form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.accueil form .formulaire-texte {
-  border: hidden;
-  font-size: 1rem;
-  font-weight: bold;
-}
-.accueil form .fas.fa-map-marker-alt {
-  padding: 0 10px 5px 40px;
-}
-
-footer {
-  background-color: #585151;
-  height: 200px;
-}
-footer h2 {
-  font-family: "Shrikhand";
-  padding: 20px 0 0 20px;
-  font-size: 1.2 rem;
-  color: white;
-}
-footer li {
-  padding: 0 0 5px 20px;
-}
-
-/*# sourceMappingURL=styles.css.map */

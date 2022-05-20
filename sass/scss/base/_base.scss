@@ -1,10 +1,24 @@
 
 
+/*présentation de la page*/
+/*body*/
+
+body{
+  @media all and (min-width:1200px){
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  
+  }
+  
+  
+    }
+
 
 .page-format{
   width:100%;
 }
-    
+/*liens et images du site*/
 a{
   text-decoration:none;
 }
@@ -17,3 +31,248 @@ img{
   padding-inline-start:0px;
 }
 
+
+
+
+
+
+
+
+.accueil {
+  
+  
+  /* section info  */
+  .section-info{
+      height: auto;
+      display:flex;
+      justify-content: center;
+      width:100%;
+      background:$info-fond;
+
+       div{
+          text-align: center;
+          margin-top: 20px;
+  
+          h2
+          {
+             margin-top: 30px;
+             padding-bottom: 10px;
+             padding-left: 55px;
+             font-size: 1.6rem;
+             font-weight: bold;
+             width: 70%;
+          }
+  
+          h3
+          {
+             font-size: 1.2rem;
+             padding-left: 40px;
+             width: 80%;   
+             font-weight: initial
+  
+          }   
+  
+          a
+          {
+            @include bouton;
+            padding: 15px 15px;  
+          }
+      }
+    }
+  
+  /*section fonctionnement*/
+  
+  .section-fonctionnement{
+     
+    ol
+     {
+      
+          padding-left: 0px; 
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+      
+     }
+  
+     li
+     {
+         position: relative;
+         @include carte-format;
+         counter-increment: step;
+         display: flex;
+         align-items: flex-end;
+  
+        &::before
+        {
+         content: counter(step);
+         position: relative;
+         right: 10px;
+         padding: 4px 9px;
+         border-radius: 50%;
+         color: #fafafa;
+         background-color: #9356DC;
+        }
+     }
+  
+      h2
+      { 
+             margin-top: 30px;
+             margin-bottom: 15px;
+             padding-bottom: 10px;
+             padding-left: 30px;
+             font-size: 1.3rem;
+             font-weight: bold;
+             
+      }
+      
+     & .fas.fa-mobile-alt,.fas.fa-list-ul,.fas.fa-store
+         {
+          padding: 0px 10px;
+          padding-right: 20px;
+          color:$icone-couleur;
+          font-size: 20px;
+         }
+         .fas.fa-mobile-alt
+         {
+             padding-left: 10px;
+         }
+                                
+     &_number-one-sec-two
+      {
+       position: absolute;
+       left: -10px;
+       color: white;
+       padding: 5px 8px;
+       border-radius: 50%;
+       background-color: $chiffre-couleur;
+      }
+    }
+  /* Fin de la section 2 */
+  
+  /* Main == BACKGROUND COLOR AND MARGING */
+  main
+  {
+      margin-top: 10px;
+      padding-bottom: 40px;
+      background: $info-fond;
+  }
+  
+  /* Début section 3 */
+  
+  /* Gestion du H2 de l'id RESTAURANT */
+  #restaurants
+  {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  
+    h2
+    {
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding-top: 40px;
+      position: relative;
+      left: -100px;
+    }
+  }
+      /*articles de l'index)  */
+      .article1, .article2  
+      {
+       position: relative;
+       border-radius: 10px / 10px;
+       margin-top: 20px;
+       width: 90%;
+       border: 1px solid $gris-fond;
+       background: white;
+       height: 250px;
+       box-shadow: 0px 0px 20px 0px #00000152;
+  
+      img
+      {
+          width: 100%;
+          border-radius: 10px / 10px;
+          height: 180px;
+          object-fit: cover;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+      }
+      span
+      {
+          position: absolute;
+          top: 10px;
+          right: 5px;
+          color: $bouton-couleur;
+          padding: 5px 10px;
+          background: $bouton-fond;
+          border-radius: 2px / 2px;
+          font-weight: bold;
+          font-size: 0.8rem;
+      }
+  
+     /* Ajout de la mixin pour le h3 (valeur ajoutée dans les parenthèses (margin-top) */
+      &_version1{ 
+          @include article-format(10px)
+      }
+  
+      &_version2{
+          @include article-format(15px)}
+      /* Fin de la mixin */
+      
+      p
+      {
+          margin-left: 10px;
+          margin-top: 5px;
+          font-size: 1rem;
+      }
+  
+      & .far.fa-heart{
+        font-size: 30px;
+        color: black;
+          
+        /* !!!!!! Permet de garder le hover même si le scale de l'enfant est trop petit !!!!! */
+        &:hover > .fas.fa-heart{
+            
+          animation: 1.2s heart-progress forwards ease-in-out ;
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+  
+        & .fas.fa-heart{
+            color:$coeur-couleur;
+        }
+      
+      }
+  
+      & .fas.fa-heart{
+          position: absolute;
+          font-size: 30px;
+          z-index: 2;
+          right: 0px;
+          top: 0px;
+          left: 0px;
+          bottom: 0px;
+          opacity: 0;
+      }
+  
+     &_carte{
+      position: absolute;
+      font-size: 0px;
+      top: 0px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+     }
+     &_coeur-effet{
+         z-index: 2;
+         position: absolute;
+         bottom: 20px;
+         right: 10px;
+        
+         &:hover{
+         color:$coeur-couleur-hover;    
+         }
+           }
+    }
+  }
+  
