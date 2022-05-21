@@ -52,7 +52,7 @@ img {
   display: flex;
   justify-content: center;
   width: 100%;
-  background: rgb(230, 211, 211);
+  background: rgb(246, 246, 246);
 }
 .accueil .section-info div {
   text-align: center;
@@ -163,7 +163,7 @@ img {
 .accueil main {
   margin-top: 10px;
   padding-bottom: 40px;
-  background: rgb(230, 211, 211);
+  background: rgb(246, 246, 246);
 }
 .accueil #restaurants {
   display: flex;
