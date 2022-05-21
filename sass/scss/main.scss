@@ -1,16 +1,19 @@
-@import "base/base";
-@import "base/typography";
-@import "utils/extensions";
 @import "utils/variables";
-@import "utils/functions";
 @import "utils/mixins";
+@import "base/base";
+@import "utils/animations";
+@import "layouts/footer";
+@import "layouts/media-accueil";
+@import "layouts/media-footer";
+@import "base/typography";
+@import "utils/functions";
+@import "pages/menus";
 @import "layouts/header";
 @import "layouts/nav";
 @import "layouts/container";
 @import "layouts/form";
-@import "layouts/footer";
 @import "components/button";
-@import "pages/menus";
+
 
 
 
@@ -19,5 +22,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
 
 
+@keyframes heart-progress {
+    
+    1% {
+        opacity: 0.5;
+        transform: scale(0.1);
+        transform-origin: bottom;
+        
 
+      
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) ;
+        transform-origin: bottom;
+        
+    }
+    
+}
 
+/* animation for checks */
+@keyframes check {
+  0% {
+  color: white;
+  width: 150px;
+  }
+  100% {
+  width: 30px;
+  }
+}

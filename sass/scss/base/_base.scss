@@ -232,7 +232,7 @@ img{
         /* !!!!!! Permet de garder le hover même si le scale de l'enfant est trop petit !!!!! */
         &:hover > .fas.fa-heart{
             
-          animation: 1.2s heart-progress forwards ease-in-out ;
+          animation: 0s heart-progress forwards ease-in-out ;
           -webkit-background-clip: text;
           background-clip: text;
         }
