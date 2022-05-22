@@ -1,12 +1,15 @@
+@import "pages/reset.scss";
 @import "utils/variables";
 @import "utils/mixins";
-@import "base/base";
+@import "base/typography";
 @import "utils/animations";
+@import "utils/functions";
+
+@import "base/base";
 @import "layouts/footer";
 @import "layouts/media-accueil";
 @import "layouts/media-footer";
-@import "base/typography";
-@import "utils/functions";
+@import "pages/menus-media";
 @import "pages/menus";
 @import "layouts/header";
 @import "layouts/nav";

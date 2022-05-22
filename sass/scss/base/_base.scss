@@ -32,13 +32,42 @@ img{
 }
 
 
+.accueil{ 
+
+  form{
+      background-color:$form-fond;
+      border-top:form-bordure; /*$border-form!important*/
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      justify-content:center;
+       height:50px;
+
+      & .formulaire-texte{
+           border:hidden;
+           font-size:1rem;
+           font-weight:bold;
+           background-color:$form-fond;
+
+      }
+
+      & .fas.fa-map-marker-alt{
+           padding-right: 10px;
+           padding-bottom:5px;
+           padding-left:40px;
+
+      }
+
+  
+
+
+}
 
 
 
 
 
 
-.accueil {
   
   
   /* section info  */
@@ -137,7 +166,7 @@ img{
              padding-left: 10px;
          }
                                 
-     &_number-one-sec-two
+     /*&_number-one-sec-two
       {
        position: absolute;
        left: -10px;
@@ -145,7 +174,7 @@ img{
        padding: 5px 8px;
        border-radius: 50%;
        background-color: $chiffre-couleur;
-      }
+      }*/
     }
   /* Fin de la section 2 */
   
@@ -169,7 +198,7 @@ img{
     h2
     {
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       padding-top: 40px;
       position: relative;
       left: -100px;

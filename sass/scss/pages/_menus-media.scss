@@ -1,0 +1,142 @@
+/* MQ PAGES MENUS */
+.menus {
+    /* Début de la MQ de 1200px  */
+     @media all and (min-width: 1200px) {
+    
+    
+       /* Gestion de la section principal */
+           .main-menus
+           {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+       
+         .texte-presentation 
+         {
+           width: 1200px;
+         }
+           .menu-carte_entree
+        {
+         width: 30%!important;
+        }
+        .menu-carte_plat
+        {
+          width: 30%;
+         
+        }
+        .menu-carte_dessert
+        {
+          width: 30%;
+        }
+        li 
+        {
+          margin-left: 20px;
+        }
+              
+        }
+           .menu-carte
+         {
+           flex-direction: row!important;
+           width: 1200px;
+         }
+       
+        .li-article
+         {
+             width: 25%!important;
+         }
+    
+         /* Fin de la section principale */
+     }
+    /* Fin de la MQ de 1200px  */
+    }
+    /* Fin de la page Menus */
+    // queries pour les boutons choix
+    @media screen and (max-width: 1020px) {
+      .choix_btn li {
+        width: 40%;
+      }
+    }
+    @media screen and (max-width: 1040px) {
+      .choix_btn li {
+        width: 90%;
+      }
+    }
+    
+    @media screen and (max-width: 460px) {
+      .choix_btn li {
+        width: 90%;
+        font-size: 13px;
+        i {
+          font-size: 15px;
+          }
+      }
+      .choix li::before {
+        right: 35px;
+        padding: 2px 6px;
+      }
+    }
+    // queries pour les cartes de restaurant
+    @media screen and (max-width: 960px) {
+      .carte {
+        width: 80%;
+    
+        img 
+        {
+          height: 200px;
+        }
+      }
+    }
+    @media screen and (max-width: 620px) {
+      .carte {
+        width: 90%;
+        img 
+        {
+          height: 200px;
+        }
+      }
+    }
+    
+    @media screen and (min-width:1600px) {
+      .menu-card_entree,
+      .menu-carte_plat,
+      .menu-card_dessert {
+        justify-content: center;
+        width: 32%;
+      }
+      
+    }
+    @media screen and (max-width: 992px) {
+      .menu-carte h3{
+      width: 8%;
+      }
+    }
+    @media screen and( max-width:550px) {
+       .menu-carte h3{
+      width: 14%;
+      }
+    }
+    @media screen and (max-width: 420px) {
+      .restaurant-name h2{
+      font-size: 25px;
+      }
+      .menu-carte {
+        justify-content: center;
+        h3
+        {
+        width: 16%;
+        }
+      }
+    
+      .menu-carte_entree,
+      .menu-carte_plat,
+      .menu-carte_dessert {
+        justify-content: center;
+        width: 90%;
+      }
+    
+      .menu-carte_Prix {
+        font-size: 12px;
+        padding: 8px 5px;
+      }
+    }
+    

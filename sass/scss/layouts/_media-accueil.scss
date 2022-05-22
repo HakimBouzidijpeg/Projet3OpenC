@@ -111,7 +111,7 @@
            /* Début de la section restaurant */
            #restaurants
            {
-               flex-direction: row!important;
+               flex-direction: row;
                position: relative;
     
              h2
@@ -125,7 +125,7 @@
                
              }
     
-             & .article-one , .article-two
+             & .article1 , .article2
              {
                 width: 46%;
                 margin-top: 100px;

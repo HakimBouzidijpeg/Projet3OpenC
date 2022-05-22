@@ -1,29 +1,2 @@
 /*formulaire*/
 
-.accueil{ 
-
-    form{
-        background:$form-fond;
-        border-top:form-bordure; /*$border-form!important*/
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:center;
-         height:50px;
-
-        & .formulaire-texte{
-             border:hidden;
-             font-size:1rem;
-             font-weight:bold;
-             background:$form-fond;
-        }
-
-        & .fas.fa-map-marker-alt{
-             padding: 0 10px 5px 40px;
-
-        }
-
-    }
-
-
-  }
