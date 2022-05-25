@@ -14,6 +14,22 @@
 
 <body class="accueil">
 
+<!-- LOADER -->
+<div class="loader">
+    
+
+    <div class="loader__cercle">
+        
+    </div>
+
+</div>
+<!-- FIN LOADER  -->
+
+
+
+
+
+
 <div class="page-format">
 <header>
    <h1> <img src="./images/logo/ohmyfood.png" alt="logo du site"></h1>
@@ -42,9 +58,9 @@ id="formulaire-texte" placeholder=" Paris, Belleville">
 <section class="section-fonctionnement"> <!--fonctionnement-->
     <h2>fonctionnement</h2>
     <ol>
-        <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-        <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
-        <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
+        <li><a href="#"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant </a></li>
+        <li><a href="#"><i class="fas fa-list-ul"></i>Composez votre menu</a></li>
+        <li><a href="#"><i class="fas fa-store"></i>Dégustez au restaurant</a></li>
     </ol>
 </section>
 
@@ -57,75 +73,84 @@ id="formulaire-texte" placeholder=" Paris, Belleville">
 
 <h2>restaurants</h2>
 
-<article class="article1">
+
+
+<a class="article1" href="./menus/Palette_du_gout.html">
     <img 
     src="./images/photos/Palette_du_gout.jpg" alt="La palette du gôut"/>
     <span>Nouveau</span>
 <h3 class="article1_version1">La palette du goût</h3>
 <p>Ménilmontant</p>
-<a class="article1_carte" 
-href="./menus/Palette_du_gout.html">Voir le menu de la Palette_du_gout</a>
-<a class="article1_coeur-effet" href="#article">
+<div class="article1_carte"></div>
+<div class="article1_coeur-effet">
     <i class="far fa-heart">
    <i class="fas fa-heart"></i>
     </i>
-    </a>
-</article>
+</div>
+</a>
 
-<article class="article1">
+
+
+<a class="article1" href="./menus/Note_enchantee.html">
     <img 
     src="./images/photos/Note_enchantee.jpg" alt="La note enchantée"/>
     <span>Nouveau</span>
 <h3 class="article1_version1">La note enchantée</h3>
 <p>Charonne</p>
-<a class="article1_carte" 
-href="./menus/Note_enchantee.html">Voir le menu de la Note enchantée</a>
-<a class="article1_coeur-effet" href="#article">
+<div class="article1_carte"></div>
+<div class="article1_coeur-effet">
     <i class="far fa-heart">
    <i class="fas fa-heart"></i>
     </i>
-    </a>
-</article>
+</div>
+</a>
 
-<article class="article2">
-    
-    <img src="./images/photos/A_la_française.jpg" alt="A la française"/>
+
+
+
+
+<a class="article2" href="./menus/A_la_française.html">
+    <img 
+    src="./images/photos/A_la_française.jpg" alt="A la française"/>
 <h3 class="article2_version2">A la française</h3>
 <p>Cité Rouge</p>
-<a class="article2_carte" 
-href="./menus/A_la_française.html">Voir le menu de A la française</a>
-<a class="article1_coeur-effet" href="#article">
-    <i class="far fa-heart">
-        <i class="fas fa-heart"></i>
-    </i>
-    </a>
-
-
-
-
-</article>
-
-<article class="article2">
-    <img 
-    src="./images/photos/Delice_des_sens.jpg" 
-    alt="le délice des sens"/>
-<h3 class="article2_version2">Le délice des sens</h3>
-<p>Folie-Méricourt</p>
-<a class="article2_carte" 
-href="./menus/Delice_des_sens.html">Voir le menu du Délice des sens</a>
-<a class="article1_coeur-effet" href="#article">
+<div class="article2_carte"></div>
+<div class="article1_coeur-effet">
     <i class="far fa-heart">
    <i class="fas fa-heart"></i>
     </i>
-    </a>
-</article>
+</div>
+</a>
+
+<a class="article2" href="./menus/Delice_des_sens.html">
+    <img 
+    src="./images/photos/Delice_des_sens.jpg" alt="Le délice des sens"/> 
+<h3 class="article2_version2">Le délice des sens</h3>
+<p>Folie-Méricourt</p>
+<div class="article2_carte"></div>
+<div class="article1_coeur-effet">
+    <i class="far fa-heart">
+   <i class="fas fa-heart"></i>
+    </i>
+</div>
+</a>
+
+
+
+
+
+
+
+
+
+
 
 </section>
 </main>
 
 
 <footer>
-<h2>ohmyfood</h2>
+<h2 class="margos">ohmyfood</h2>
 <ul>
 <li>
     <a href="#"><i class="fas fa-utensils"></i>

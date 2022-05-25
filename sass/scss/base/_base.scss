@@ -3,17 +3,16 @@
 /*présentation de la page*/
 /*body*/
 
-body{
+
   @media all and (min-width:1200px){
+
+    body{  
   display:flex;
   flex-direction:column;
   align-items:center;
   
-  }
-  
-  
     }
-
+ }
 
 .page-format{
   width:100%;
@@ -21,6 +20,7 @@ body{
 /*liens et images du site*/
 a{
   text-decoration:none;
+  color:black;
 }
         
 img{
@@ -59,9 +59,7 @@ img{
       }
 
   
-
-
-}
+  }
 
 
 
@@ -126,7 +124,7 @@ img{
      li
      {
          position: relative;
-         @include carte-format;
+         @extend .carte-fonctionnement;
          counter-increment: step;
          display: flex;
          align-items: flex-end;
@@ -166,15 +164,7 @@ img{
              padding-left: 10px;
          }
                                 
-     /*&_number-one-sec-two
-      {
-       position: absolute;
-       left: -10px;
-       color: white;
-       padding: 5px 8px;
-       border-radius: 50%;
-       background-color: $chiffre-couleur;
-      }*/
+    
     }
   /* Fin de la section 2 */
   
@@ -261,13 +251,13 @@ img{
         /* !!!!!! Permet de garder le hover même si le scale de l'enfant est trop petit !!!!! */
         &:hover > .fas.fa-heart{
             
-          animation: 0s heart-progress forwards ease-in-out ;
+          animation: 1s heart-progress forwards ease-in-out ;
           -webkit-background-clip: text;
           background-clip: text;
         }
   
         & .fas.fa-heart{
-            color:$coeur-couleur;
+            color:$couleur-tertiaire;
         }
       
       }
@@ -299,7 +289,7 @@ img{
          right: 10px;
         
          &:hover{
-         color:$coeur-couleur-hover;    
+         color:$couleur-tertiaire;    
          }
            }
     }

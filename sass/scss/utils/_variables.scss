@@ -3,7 +3,7 @@
 $form-fond:rgb(234,234,234);
 $gris-fond:#f4f4f4;
 $info-fond:rgb(246, 246, 246);
-$carte-fond:#e4d5f6;
+$carte-fond:white;
 
 /*BORDER*/
 $form-bordure:solid 2px #00000017;
@@ -17,12 +17,28 @@ $chiffre-couleur:#9356DC;
 $bouton-couleur:#278870;
 $bouton-fond:#99E2D0;
 
-/*couleur du coeur*/
-$coeur-couleur-hover:rgb(247, 169, 169);
-$coeur-couleur:#9356DC;
-
 /*border-shadow*/
 $ombre-carte:0 5px 10px 0 rgb(197 197 197/85%);
 $ombre:4px 4px 12px #bfbfbf;
 
+/*couleurs de bases pour site et loader*/
+
+$couleur-secondaire:#FF79DA; /*couleur secondaire*/
+$couleur-primaire:#9356DC;
+$couleur-tertiaire:#99E2D0;
+
+/*$couleur-coeur: linear-gradient(to top, #ebebeb, #2ee1ee);*/
+$couleur-fond: linear-gradient(to top, #f2f0f5, #d1a1c3);
+
+/*border pour loader*/
+
+$haut: 4px solid #0F9DE8;
+$droite: 4px solid #F0C300;
+$bas: 4px solid #FF0000;
+$gauche: 4px solid #800080;
+
 $texte-police:"Roboto", sans-serif;
+
+
+
+

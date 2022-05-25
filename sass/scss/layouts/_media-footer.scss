@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    
+
 
     & .fa , .fas 
     {
@@ -17,6 +19,8 @@
     h2 
     {
         padding-top: 0px;
+        
+        
     }
 
     ul
@@ -32,3 +36,21 @@
     }
   }
 }
+
+
+
+@media all and (max-width: 768px){
+
+footer h2{
+
+padding-bottom:10px;
+
+}
+
+}
+
+
+
+
+
+

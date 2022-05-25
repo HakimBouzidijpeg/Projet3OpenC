@@ -35,7 +35,7 @@ footer{
      display:inline-block;
   
       &:hover{
-          color:rgb(196, 248, 9);
+          color:$couleur-secondaire;
           cursor:pointer;
       }
     }

@@ -55,30 +55,189 @@ table {
   border-spacing: 0;
 }
 
+/*MIXIN "BOUTON"*/
+/*MIXIN des articles de l'index*/
+/*MIXIN pour la section fonctionnement*/
+/*@mixin carte-format{
+
+    padding: 20px 20px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: $gris-fond;
+    box-shadow: $ombre-carte;
+    width: 80%;
+    border-radius: 15px / 15px;
+    font-weight: bold;
+    list-style-type: none;
+    font-size: 1rem;
+
+    &:hover
+    {
+        background-color: $carte-fond;
+        cursor: pointer;
+    }
+
+    @media all and (min-width:425px)  {
+
+        width: 330px;
+    }
+
+    @media all and (min-width: 768px) {
+        margin-left: 40px;
+    }
+
+}*/
 /*BACKGROUND*/
 /*BORDER*/
 /*couleur des icônes*/
 /*fond et couleur des boutons*/
-/*couleur du coeur*/
 /*border-shadow*/
-/*MIXIN "BOUTON"*/
-/*MIXIN des articles de l'index*/
-/*MIXIN pour la section fonctionnement*/
-html {
-  font-size: 15px;
-  font-family: "Roboto";
+/*couleurs de bases pour site et loader*/
+/*couleur secondaire*/
+/*$couleur-coeur: linear-gradient(to top, #ebebeb, #2ee1ee);*/
+/*border pour loader*/
+/* Création d'une extension pour la section 2  */
+.carte-fonctionnement, .accueil .section-fonctionnement li {
+  padding: 20px 20px;
+  padding-left: 0px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0 5px 10px 0 rgba(197, 197, 197, 0.85);
+  width: 80%;
+  border-radius: 15px/15px;
+  font-weight: bold;
+  list-style-type: none;
+  font-size: 1rem;
+}
+.carte-fonctionnement:hover, .accueil .section-fonctionnement li:hover {
+  background: white;
+  box-shadow: 5px 5px 5px grey;
+  cursor: pointer;
+}
+@media all and (min-width: 425px) {
+  .carte-fonctionnement, .accueil .section-fonctionnement li {
+    width: 330px;
+  }
+}
+@media all and (min-width: 768px) {
+  .carte-fonctionnement, .accueil .section-fonctionnement li {
+    margin-left: 40px;
+  }
+}
+
+/* LOADER  */
+.loader {
+  /* Configuration de la page temporaire pour le loader */
+  animation: loader 5s cubic-bezier(0, 0, 0.13, -0.83);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 0;
+  /*propriétés du cercle*/
+  /* cercle */
+  /* page temporaire */
+}
+.loader__cercle {
+  margin: auto;
+  border-top: 4px solid #0F9DE8;
+  border-right: 4px solid #F0C300;
+  border-bottom: 4px solid #FF0000;
+  border-left: 4px solid #800080;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  z-index: 1;
+  animation: spin 4s;
+}
+@keyframes spin {
+  1% {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.1);
+    z-index: 101;
+    background: linear-gradient(to top, #f2f0f5, #d1a1c3);
+  }
+  10% {
+    opacity: 0.9;
+    transform: rotate(10deg) scale(0.2);
+    background: #FF79DA;
+  }
+  20% {
+    opacity: 0.8;
+    transform: rotate(30deg) scale(0.3);
+    background: #9356DC;
+  }
+  40% {
+    opacity: 0.9;
+    transform: rotate(90deg) scale(0.5);
+    background: #99E2D0;
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(270deg) scale(1);
+    background: #9356DC;
+  }
+  70% {
+    opacity: 0.8;
+    transform: rotate(400deg) scale(2);
+    background: #FF79DA;
+  }
+  80% {
+    opacity: 0.7;
+    transform: rotate(800deg) scale(3);
+    background: #9356DC;
+  }
+  90% {
+    opacity: 0.4;
+    transform: rotate(1600deg) scale(2.5);
+    background: linear-gradient(to top, #f2f0f5, #d1a1c3);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0;
+    background-color: linear-gradient(to top, #f2f0f5, #d1a1c3);
+  }
+}
+@keyframes loader {
+  1% {
+    background: linear-gradient(to top, #f2f0f5, #d1a1c3);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  95% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes heart-progress {
   1% {
-    opacity: 0.5;
-    transform: scale(0.1);
-    transform-origin: bottom;
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: center;
   }
   100% {
     opacity: 1;
     transform: scale(1);
-    transform-origin: bottom;
+    transform-origin: center;
   }
 }
 /* animation for checks */
@@ -91,6 +250,92 @@ html {
     width: 30px;
   }
 }
+/* Animation des menus de cartes  */
+.menus {
+  /* Fin de l'animation des menus de cartes  */
+}
+.menus main {
+  animation: 0.8s ease-in-out apparing-contenu-menus;
+}
+@keyframes apparing-contenu-menus {
+  1% {
+    opacity: 0.1;
+    transform: scale(0.1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(0.1);
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.menus .menu-entree1, .menus .menu-plat1, .menus .menu-dessert1 {
+  animation: 2.5s ease-in-out apparing-contenu-plat_one;
+}
+@keyframes apparing-contenu-plat_one {
+  1% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menus .menu-entree2, .menus .menu-plat2, .menus .menu-dessert2 {
+  animation: 3s ease-in-out apparing-contenu-plat_two;
+}
+@keyframes apparing-contenu-plat_two {
+  1% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menus .menu-entree3, .menus .menu-plat3, .menus .menu-dessert3 {
+  animation: 3.5s ease-in-out apparing-contenu-plat_tree;
+}
+@keyframes apparing-contenu-plat_tree {
+  1% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menus .menu-entree4 {
+  animation: 4s ease-in-out apparing-contenu-plat_tree;
+}
+@keyframes apparing-contenu-plat_tree {
+  1% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html {
+  font-size: 15px;
+  font-family: "Roboto";
+}
+
 /*présentation de la page*/
 /*body*/
 @media all and (min-width: 1200px) {
@@ -100,7 +345,6 @@ html {
     align-items: center;
   }
 }
-
 .page-format {
   width: 100%;
 }
@@ -108,6 +352,7 @@ html {
 /*liens et images du site*/
 a {
   text-decoration: none;
+  color: black;
 }
 
 img {
@@ -190,17 +435,6 @@ img {
   box-shadow: 0px 0px 20px rgba(0, 0, 1, 0.3215686275);
   filter: brightness(1.3);
 }
-.accueil .section-fonctionnement {
-  /*&_number-one-sec-two
-   {
-    position: absolute;
-    left: -10px;
-    color: white;
-    padding: 5px 8px;
-    border-radius: 50%;
-    background-color: $chiffre-couleur;
-   }*/
-}
 .accueil .section-fonctionnement ol {
   padding-left: 0px;
   display: flex;
@@ -209,34 +443,9 @@ img {
 }
 .accueil .section-fonctionnement li {
   position: relative;
-  padding: 20px 20px;
-  padding-left: 0px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  background-color: #f4f4f4;
-  box-shadow: 0 5px 10px 0 rgba(197, 197, 197, 0.85);
-  width: 80%;
-  border-radius: 15px/15px;
-  font-weight: bold;
-  list-style-type: none;
-  font-size: 1rem;
   counter-increment: step;
   display: flex;
   align-items: flex-end;
-}
-.accueil .section-fonctionnement li:hover {
-  background-color: #e4d5f6;
-  cursor: pointer;
-}
-@media all and (min-width: 425px) {
-  .accueil .section-fonctionnement li {
-    width: 330px;
-  }
-}
-@media all and (min-width: 768px) {
-  .accueil .section-fonctionnement li {
-    margin-left: 40px;
-  }
 }
 .accueil .section-fonctionnement li::before {
   content: counter(step);
@@ -337,12 +546,12 @@ img {
   /* !!!!!! Permet de garder le hover même si le scale de l'enfant est trop petit !!!!! */
 }
 .accueil .article1 .far.fa-heart:hover > .fas.fa-heart, .accueil .article2 .far.fa-heart:hover > .fas.fa-heart {
-  animation: 0s heart-progress forwards ease-in-out;
+  animation: 1s heart-progress forwards ease-in-out;
   -webkit-background-clip: text;
   background-clip: text;
 }
 .accueil .article1 .far.fa-heart .fas.fa-heart, .accueil .article2 .far.fa-heart .fas.fa-heart {
-  color: #9356DC;
+  color: #99E2D0;
 }
 .accueil .article1 .fas.fa-heart, .accueil .article2 .fas.fa-heart {
   position: absolute;
@@ -370,7 +579,248 @@ img {
   right: 10px;
 }
 .accueil .article1_coeur-effet:hover, .accueil .article2_coeur-effet:hover {
-  color: rgb(247, 169, 169);
+  color: #99E2D0;
+}
+
+/* Début de la seconde page */
+.menus {
+  /* Début du main */
+  /* Gestion du Bouton commander */
+  /* Fin du Bouton commander */
+  /* carte de menu */
+}
+.menus main {
+  opacity: 1;
+  /* Gestion de la section principale */
+  /* Gestion de la div de la section principal */
+  /* Fin du main */
+}
+.menus main .main-menus {
+  background-color: white;
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+  position: relative;
+}
+.menus main p img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.menus main .texte-presentation {
+  position: relative;
+  /* Fin de la div de la section principal */
+}
+.menus main .texte-presentation h2 {
+  font-family: "Shrikhand";
+  font-size: 1.5rem;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+.menus main .texte-presentation .fas.fa-heart {
+  position: absolute;
+  font-size: 30px;
+  z-index: 2;
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  opacity: 0;
+  color: #99E2D0;
+}
+.menus main .texte-presentation .fas.fa-heart:hover {
+  animation: 1s heart-progress forwards ease-in-out;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menus main .texte-presentation .far.fa-heart {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  font-size: 30px;
+  color: black;
+}
+.menus p {
+  text-align: center;
+}
+.menus p .bouton-menu {
+  display: inline-block;
+  color: white;
+  background: linear-gradient(to top, #9256dc, #ff79d9);
+  box-shadow: 0 0 8 rgba(0, 0, 0, 0.4117647059);
+  border-radius: 30px 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 15px 40px;
+  border: 0px;
+  cursor: pointer;
+}
+.menus p .bouton-menu:hover {
+  transform: scale(1.2);
+  transition-duration: 700ms;
+  box-shadow: 0px 0px 20px rgba(0, 0, 1, 0.3215686275);
+  filter: brightness(1.3);
+}
+.menus .menu-carte {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+  width: 100%;
+  /* bloc menu entree */
+}
+.menus .menu-carte h3 {
+  font-size: 1.1rem;
+  margin-left: 7px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: initial;
+  border-bottom: 3px solid #99E2D0;
+  text-transform: uppercase;
+  width: 40px;
+  margin-bottom: 5px;
+}
+.menus .menu-carte_entree, .menus .menu-carte_plat, .menus .menu-carte_dessert {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: 20px !important;
+  margin: 10px;
+}
+.menus .menu-carte_titre span {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  margin: 5px;
+}
+.menus .menu-carte_titre :nth-child(1) {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.menus .menu-carte_choix {
+  box-sizing: border-box;
+  display: flex;
+  width: auto;
+  /*auto*/
+  box-shadow: 4px 4px 12px #bfbfbf;
+  margin-bottom: 25px;
+}
+.menus .menu-choix {
+  display: flex;
+}
+.menus .menu_entree1, .menus .menu_entree2, .menus .menu_entree3, .menus .menu_entree4 {
+  width: 100%;
+}
+.menus .menu_plat1, .menus .menu_plat2, .menus .menu_plat3 {
+  width: 100%;
+}
+.menus .menu_dessert1, .menus .menu_dessert2, .menus .menu_dessert3 {
+  width: 100%;
+}
+.menus .menu-carte_choix {
+  justify-content: center;
+  align-items: center;
+  padding: 0 7px;
+  border-radius: 15px 15px 15px 15px;
+  cursor: pointer;
+  width: 370px;
+}
+.menus .menu-carte_titre {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.menus .menu-carte_titre span {
+  width: auto;
+  font-size: 1rem;
+}
+.menus .menu-carte_prix {
+  font-weight: 600;
+  position: relative;
+  align-self: flex-end;
+  margin-left: auto;
+  padding: 8px 20px;
+}
+.menus input[type=radio] {
+  display: none;
+}
+.menus label .fas {
+  border-radius: 0px 15px 15px 0px;
+  right: -7px;
+  height: 78px;
+  color: transparent;
+}
+.menus input[type=radio]:checked + .fas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 10px;
+  border-radius: 0px 12px 12px 0px;
+  background-color: rgb(153, 226, 208);
+  transition-duration: 1s;
+  animation: check 0.8s ease-in reverse both;
+}
+.menus .menu-carte_choix:checked .fas {
+  transition-duration: 1s;
+  animation: check 0.8s ease-in-out reverse both;
+}
+.menus .fa-check-circle:before {
+  font-size: 1.4rem;
+}
+.menus .menu-carte_entree {
+  animation: menu-carte 2s ease-in-out 1.2s normal both;
+}
+.menus .menu-carte_plat {
+  animation: menu-carte 2s ease-in-out 2s normal both;
+}
+.menus .menu-carte_dessert {
+  animation: menu-carte 3s ease-in-out 3s normal both;
+}
+.menus .btn order {
+  border: none;
+  color: white;
+}
+
+/*header commun à toutes les pages*/
+header {
+  text-align: center;
+  position: relative;
+  height: auto;
+}
+header h1 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+header h1:hover {
+  transform: scale(1.15);
+  transition: 350ms;
+}
+header .fleche-reglage {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+}
+header .fas.fa-arrow-left {
+  font-size: 30px;
+  color: black;
+}
+header .fas.fa-arrow-left:hover {
+  transform: scale(1.25);
+  transition: 250ms;
 }
 
 /*format du footer*/
@@ -404,7 +854,7 @@ footer a, footer h2 {
   display: inline-block;
 }
 footer a:hover, footer h2:hover {
-  color: rgb(196, 248, 9);
+  color: #FF79DA;
   cursor: pointer;
 }
 
@@ -424,7 +874,7 @@ footer a:hover, footer h2:hover {
     /* Fin section info */
     /* section fonctionnement  */
     /* Fin section fonctionnement  */
-    /* Début section retaurants */
+    /* Début section restaurants */
   }
   .accueil .section-info {
     display: flex;
@@ -538,14 +988,16 @@ footer a:hover, footer h2:hover {
     padding-bottom: 0px;
   }
 }
-/* MQ PAGES MENUS */
-.menus {
-  /* Début de la MQ de 1200px  */
-  /* Fin de la MQ de 1200px  */
+@media all and (max-width: 768px) {
+  footer h2 {
+    padding-bottom: 10px;
+  }
 }
+/* MQ PAGES MENUS */
+/* Début de la MQ de 1200px  */
 @media all and (min-width: 1200px) {
   .menus {
-    /* Gestion de la section principal */
+    /* Gestion de la section principale */
     /* Fin de la section principale */
   }
   .menus .main-menus {
@@ -572,355 +1024,34 @@ footer a:hover, footer h2:hover {
     flex-direction: row !important;
     width: 1200px;
   }
-  .menus .li-article {
-    width: 25% !important;
-  }
-}
 
-/* Fin de la page Menus */
-@media screen and (max-width: 1020px) {
-  .choix_btn li {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 1040px) {
-  .choix_btn li {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 460px) {
-  .choix_btn li {
-    width: 90%;
-    font-size: 13px;
-  }
-  .choix_btn li i {
-    font-size: 15px;
-  }
-
-  .choix li::before {
-    right: 35px;
-    padding: 2px 6px;
-  }
-}
-@media screen and (max-width: 960px) {
-  .carte {
-    width: 80%;
-  }
-  .carte img {
-    height: 200px;
-  }
-}
-@media screen and (max-width: 620px) {
-  .carte {
-    width: 90%;
-  }
-  .carte img {
-    height: 200px;
-  }
+  /* Fin de la MQ de 1200px  */
 }
 @media screen and (min-width: 1600px) {
-  .menu-card_entree,
+  .menu-carte_entree,
 .menu-carte_plat,
-.menu-card_dessert {
+.menu-carte_dessert {
     justify-content: center;
     width: 32%;
   }
 }
-@media screen and (max-width: 992px) {
-  .menu-carte h3 {
-    width: 8%;
+/*ajouts à vérifier, fait le 23/05/2022*/
+@media screen and (max-width: 1075px) {
+  .menus .menu-carte_choix {
+    width: auto;
   }
 }
-@media screen and (max-width: 550px) {
-  .menu-carte h3 {
-    width: 14%;
-  }
-}
-@media screen and (max-width: 420px) {
-  .restaurant-name h2 {
-    font-size: 25px;
-  }
-
-  .menu-carte {
-    justify-content: center;
-  }
-  .menu-carte h3 {
-    width: 16%;
+@media screen and (max-width: 590px) {
+  .menus .menu-carte_choix {
+    width: 100%;
   }
 
   .menu-carte_entree,
 .menu-carte_plat,
 .menu-carte_dessert {
-    justify-content: center;
-    width: 90%;
-  }
-
-  .menu-carte_Prix {
-    font-size: 12px;
-    padding: 8px 5px;
+    width: auto;
   }
 }
-/* Début de la seconde page */
-.menus {
-  /* Début du main */
-  /* Gestion du Bouton commander */
-  /* Fin du Bouton commander */
-  /* carte de menu */
-  /*.bouton-ordre {
-    border: none;
-    color: white;
-  }*/
-}
-.menus main {
-  opacity: 1;
-  /* Gestion de la section principale */
-  /* Gestion de la div de la section principal */
-  /* Fin du main */
-}
-.menus main .main-menus {
-  background-color: white;
-  border-radius: 40px 40px 0 0;
-  margin-top: -40px;
-  position: relative;
-}
-.menus main p img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-.menus main .texte-presentation {
-  position: relative;
-  /* Fin de la div de la section principal */
-}
-.menus main .texte-presentation h2 {
-  font-family: "Shrikhand";
-  font-size: 1.5rem;
-  padding-top: 40px;
-  padding-left: 20px;
-}
-.menus main .texte-presentation .fas.fa-heart {
-  position: absolute;
-  font-size: 30px;
-  z-index: 2;
-  right: 0px;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  opacity: 0;
-  color: #9356DC;
-}
-.menus main .texte-presentation .fas.fa-heart:hover {
-  animation: 0s heart-progress forwards ease-in-out;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-.menus main .texte-presentation .far.fa-heart {
-  position: absolute;
-  right: 30px;
-  top: 40px;
-  font-size: 30px;
-  color: black;
-}
-.menus p {
-  text-align: center;
-}
-.menus p .bouton-menu {
-  display: inline-block;
-  color: white;
-  background: linear-gradient(to top, #9256dc, #ff79d9);
-  box-shadow: 0 0 8 rgba(0, 0, 0, 0.4117647059);
-  border-radius: 30px 30px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  padding: 15px 40px;
-  border: 0px;
-  cursor: pointer;
-}
-.menus p .bouton-menu:hover {
-  transform: scale(1.2);
-  transition-duration: 700ms;
-  box-shadow: 0px 0px 20px rgba(0, 0, 1, 0.3215686275);
-  filter: brightness(1.3);
-}
-.menus .menu-carte {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-bottom: 50px;
-  width: 100%;
-  /* bloc menu entree */
-}
-.menus .menu-carte h3 {
-  font-size: 1.1rem;
-  margin-left: 7px;
-  margin-top: 20px;
-  padding-bottom: 5px;
-  font-family: "Roboto", sans-serif;
-  font-weight: initial;
-  border-bottom: 3px solid #99E2D0;
-  text-transform: uppercase;
-  width: 40px;
-  margin-bottom: 5px;
-}
-.menus .menu-carte_entree, .menus .menu-carte_plat, .menus .menu-carte_dessert {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 90%;
-  margin-left: 20px !important;
-  margin: 10px;
-}
-.menus .menu-carte_titre span {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 1rem;
-  margin: 5px;
-}
-.menus .menu-carte_titre :nth-child(1) {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.menus .menu-carte_choix {
-  box-sizing: border-box;
-  display: flex;
-  width: auto;
-  box-shadow: 4px 4px 12px #bfbfbf;
-  margin-bottom: 25px;
-}
-.menus .menu-choix {
-  display: flex;
-}
-.menus .menu_entree1, .menus .menu_entree2, .menus .menu_entree3, .menus .menu_entree4 {
-  width: 100%;
-}
-.menus .menu_plat1, .menus .menu_plat2, .menus .menu_plat3 {
-  width: 100%;
-}
-.menus .menu_dessert1, .menus .menu_dessert2, .menus .menu_dessert3 {
-  width: 100%;
-}
-.menus .menu-carte_choix {
-  justify-content: center;
-  align-items: center;
-  padding: 0 7px;
-  border-radius: 15px 15px 15px 15px;
-  cursor: pointer;
-}
-.menus .menu-carte_titre {
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 100%;
-}
-.menus .menu-carte_titre span {
-  width: auto;
-  font-size: 1rem;
-}
-.menus .menu-carte_prix {
-  font-weight: 600;
-  position: relative;
-  align-self: flex-end;
-  margin-left: auto;
-  padding: 8px 20px;
-}
-.menus input[type=radio] {
-  display: none;
-}
-.menus label .fas {
-  border-radius: 0px 15px 15px 0px;
-  right: -7px;
-  height: 78px;
-  color: transparent;
-}
-.menus input[type=radio]:checked + .fas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 10px;
-  border-radius: 0px 12px 12px 0px;
-  background-color: rgb(153, 226, 208);
-  transition-duration: 1s;
-  animation: check 0.8s ease-in reverse both;
-}
-.menus .menu-carte_choix:checked .fas {
-  transition-duration: 1s;
-  animation: check 0.8s ease-in-out reverse both;
-}
-.menus .fa-check-circle:before {
-  font-size: 1.4rem;
-}
-.menus .menu-carte_entree {
-  animation: menu-carte 2s ease-in-out 1.2s normal both;
-}
-.menus .menu-carte_plat {
-  animation: menu-carte 2s ease-in-out 2s normal both;
-}
-.menus .menu-carte_dessert {
-  animation: menu-carte 3s ease-in-out 3s normal both;
-}
-
-/*header commun à toutes les pages*/
-header {
-  text-align: center;
-  position: relative;
-  height: auto;
-}
-header h1 {
-  padding-top: 10px;
-  padding-bottom: 5px;
-  display: inline-block;
-}
-header h1:hover {
-  transform: scale(1.15);
-  transition: 350ms;
-}
-header .fleche-reglage {
-  position: absolute;
-  top: 13px;
-  left: 20px;
-}
-header .fas.fa-arrow-left {
-  font-size: 30px;
-  color: black;
-}
-header .fas.fa-arrow-left:hover {
-  transform: scale(1.25);
-  transition: 250ms;
-}
-
 /*formulaire*/
-@keyframes heart-progress {
-  1% {
-    opacity: 0.5;
-    transform: scale(0.1);
-    transform-origin: bottom;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    transform-origin: bottom;
-  }
-}
-/* animation for checks */
-@keyframes check {
-  0% {
-    color: white;
-    width: 150px;
-  }
-  100% {
-    width: 30px;
-  }
-}
 
 /*# sourceMappingURL=styles.css.map */
