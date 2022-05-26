@@ -1,34 +1,55 @@
-/*BACKGROUND*/
+/*page d'accueil*/
 
-$form-fond:rgb(234,234,234);
-$gris-fond:#f4f4f4;
-$info-fond:rgb(246, 246, 246);
-$carte-fond:white;
 
-/*BORDER*/
-$form-bordure:solid 2px #00000017;
-$bordure-bas:3px solid #99E2D0;
+/*couleur de fond des bandes de la page d'accueil*/
 
-/*couleur des icônes*/
-$icone-couleur:#939393;
-$chiffre-couleur:#9356DC;
+$form-fond: rgb(234, 234, 234);
+/*bande au dessus*/
+$info-fond: rgb(246, 246, 246);
+/*fond des cartes*/
+$carte-fond: white;
+/*fond des 3 boutons*/
 
-/*fond et couleur des boutons*/
-$bouton-couleur:#278870;
-$bouton-fond:#99E2D0;
 
-/*border-shadow*/
-$ombre-carte:0 5px 10px 0 rgb(197 197 197/85%);
-$ombre:4px 4px 12px #bfbfbf;
+/*couleur et ombre des icônes de fonctionnement*/
+$icone-couleur: #939393;
+$couleur-chiffre: #fafafa;
+$gris-fond: #F4F4F4F4;
+/*couleur de fond des 3 boutons*/
+$ombre-carte: 0 5px 10px 0 rgb(197 197 197/85%);
 
-/*couleurs de bases pour site et loader*/
+/* PAGE MENU*/
 
-$couleur-secondaire:#FF79DA; /*couleur secondaire*/
-$couleur-primaire:#9356DC;
-$couleur-tertiaire:#99E2D0;
+/*traits dans la carte du menu sous : entrées, plats et desserts*/
+/*$form-bordure:solid 2px #00000017;*/
+/*à vérifier*/
 
-/*$couleur-coeur: linear-gradient(to top, #ebebeb, #2ee1ee);*/
+$bordure-bas: 3px solid #99E2D0;
+
+
+/*fond et couleur des boutons span "nouveau"*/
+
+$bouton-couleur: #278870;
+
+/*ombre des boutons menu*/
+
+$ombre: 4px 4px 12px #bfbfbf;
+
+
+
+
+/*couleurs de la charte pour site et loader*/
+
+$couleur-secondaire: #FF79DA;
+/*couleur du coeur + loader*/
+$couleur-primaire: #9356DC;
+/*couleur des boutons ronds + loader*/
+$couleur-tertiaire: #99E2D0;
+/* couleur de fond des span "nouveau" + 
+traits des menus + loader*/
 $couleur-fond: linear-gradient(to top, #f2f0f5, #d1a1c3);
+/*loader*/
+
 
 /*border pour loader*/
 
@@ -37,8 +58,10 @@ $droite: 4px solid #F0C300;
 $bas: 4px solid #FF0000;
 $gauche: 4px solid #800080;
 
-$texte-police:"Roboto", sans-serif;
 
+/*police*/
+
+$texte-police: "Roboto", sans-serif;
 
 
 
