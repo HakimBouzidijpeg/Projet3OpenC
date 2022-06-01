@@ -1,5 +1,8 @@
 /*page d'accueil*/
 
+/*police*/
+$texte-police: "Roboto", sans-serif;
+
 
 /*couleur de fond des bandes de la page d'accueil*/
 
@@ -9,30 +12,32 @@ $info-fond: rgb(246, 246, 246);
 /*fond des cartes*/
 $carte-fond: white;
 /*fond des 3 boutons*/
+$fond-footer:#353232;
 
 
 /*couleur et ombre des icônes de fonctionnement*/
+
+$bouton-ombre-hover:3px 3px 6px 6px rgb(63, 48, 48);   /*bouton "explorez nos restaurants"*/
 $icone-couleur: #939393;
 $couleur-chiffre: #fafafa;
 $gris-fond: #F4F4F4F4;
-/*couleur de fond des 3 boutons*/
 $ombre-carte: 0 5px 10px 0 rgb(197 197 197/85%);
+
+
+
+$ombre-hover: 0 5px 10px 0 rgb(26, 23, 23);
+$bouton-fond-hover:white;
+
 
 /* PAGE MENU*/
 
-/*traits dans la carte du menu sous : entrées, plats et desserts*/
-/*$form-bordure:solid 2px #00000017;*/
-/*à vérifier*/
-
+             /*traits sous :entrées, plats et désserts*/
 $bordure-bas: 3px solid #99E2D0;
 
-
-/*fond et couleur des boutons span "nouveau"*/
-
+              /*fond et couleur des boutons span "nouveau"*/
 $bouton-couleur: #278870;
 
-/*ombre des boutons menu*/
-
+                     /*ombre des boutons menu*/
 $ombre: 4px 4px 12px #bfbfbf;
 
 
@@ -40,28 +45,28 @@ $ombre: 4px 4px 12px #bfbfbf;
 
 /*couleurs de la charte pour site et loader*/
 
-$couleur-secondaire: #FF79DA;
 /*couleur du coeur + loader*/
-$couleur-primaire: #9356DC;
+$couleur-secondaire: #FF79DA;
+
 /*couleur des boutons ronds + loader*/
-$couleur-tertiaire: #99E2D0;
+$couleur-primaire: #9356DC;
+
 /* couleur de fond des span "nouveau" + 
 traits des menus + loader*/
-$couleur-fond: linear-gradient(to top, #f2f0f5, #d1a1c3);
-/*loader*/
+$couleur-tertiaire: #99E2D0;
 
+/*couleurs supplémentaires pour le loader*/
+$couleur-loader: rgb(209, 209, 80);
+$couleur-fond: rgb(250, 243, 243);
 
 /*border pour loader*/
+$haut: 4px solid $couleur-primaire;
+$droite: 4px solid $couleur-secondaire;
+$bas: 4px solid $couleur-tertiaire;
+$gauche: 4px solid $couleur-loader;
 
-$haut: 4px solid #0F9DE8;
-$droite: 4px solid #F0C300;
-$bas: 4px solid #FF0000;
-$gauche: 4px solid #800080;
 
 
-/*police*/
-
-$texte-police: "Roboto", sans-serif;
 
 
 

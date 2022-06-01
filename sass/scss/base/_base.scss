@@ -1,7 +1,7 @@
 
 
-/*présentation de la page*/
-/*body*/
+/*présentation de la page accueil*/
+
 
 
 @media all and (min-width:1200px) {
@@ -10,13 +10,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /**/
+
+    .page-format {
+      width: 100%;
+    }
 
   }
 }
 
-.page-format {
-  width: 100%;
-}
+
 
 /*liens et images du site*/
 a {
@@ -37,8 +40,7 @@ img {
 
   form {
     background-color: $form-fond;
-    border-top: form-bordure;
-    /*$border-form!important*/
+    /*border-top: $couleur-tertiaire;*/
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -63,14 +65,8 @@ img {
 
   }
 
-
-
-
-
-
-
-
   /* section info  */
+
   .section-info {
     height: auto;
     display: flex;
@@ -95,7 +91,7 @@ img {
         font-size: 1.2rem;
         padding-left: 40px;
         width: 80%;
-        font-weight: initial
+        font-weight: initial;
       }
 
       a {
@@ -131,7 +127,7 @@ img {
         right: 10px;
         padding: 4px 9px;
         border-radius: 50%;
-        color:$couleur-chiffre;
+        color: $couleur-chiffre;
         background-color: $couleur-primaire;
       }
     }
@@ -162,9 +158,9 @@ img {
 
   }
 
-  /* Fin de la section 2 */
 
-  /* Main == BACKGROUND COLOR AND MARGING */
+
+  /* Main */
   main {
     margin-top: 10px;
     padding-bottom: 40px;
@@ -173,7 +169,7 @@ img {
 
   /* Début section 3 */
 
-  /* Gestion du H2 de l'id RESTAURANT */
+
   #restaurants {
     display: flex;
     flex-direction: column;
@@ -221,7 +217,7 @@ img {
       font-size: 0.8rem;
     }
 
-    /* Ajout de la mixin pour le h3 (valeur ajoutée dans les parenthèses (margin-top) */
+    /* Ajout de la mixin pour le h3 (valeur ajoutée dans les parenthèses (margin-top) )*/
     &_version1 {
       @include article-format(10px)
     }
@@ -230,7 +226,7 @@ img {
       @include article-format(15px)
     }
 
-    /* Fin de la mixin */
+
 
     p {
       margin-left: 10px;

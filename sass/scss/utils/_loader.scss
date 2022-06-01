@@ -42,49 +42,49 @@
                 opacity: 0;
                 transform: rotate(0deg) scale(0.1);
                 z-index: 101;    
-                background:$couleur-fond;
+                background-color:$couleur-loader;
             }
             
           10%{
              opacity:0.9;
              transform:rotate(10deg) scale(0.2);
-            background:$couleur-secondaire;
+            background-color:$couleur-secondaire;
           }
 
 
             20%{
                 opacity:0.8;
                 transform: rotate(30deg) scale(0.3);
-              background:$couleur-primaire;
+              background-color:$couleur-primaire;
             }
 
             40%{
               opacity:0.9;
                 transform:rotate(90deg) scale(0.5);
-             background:$couleur-tertiaire;
+             background-color:$couleur-tertiaire;
               }
    
         60%{
         opacity:1;
         transform:rotate(270deg) scale(1);
-          background:$couleur-primaire;
+          background-color:$couleur-primaire;
         }
             
           70%{
         opacity:0.8;
         transform:rotate(400deg) scale(2);
-          background:$couleur-secondaire;
+          background-color:$couleur-secondaire;
           }
 
           80%{
             opacity:0.7;
             transform:rotate(800deg) scale(3);
-              background:$couleur-primaire;
+              background-color:$couleur-primaire;
                 }
               90%{
                 opacity:0.4;
                 transform:rotate(1600deg) scale(2.5);
-                  background:$couleur-fond;
+                  background-color:$couleur-fond;
                  }
 
 
