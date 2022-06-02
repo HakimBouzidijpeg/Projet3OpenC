@@ -1,0 +1,132 @@
+
+/* LOADER  */
+
+.loader
+{
+    /* Configuration de la page temporaire pour le loader */
+    animation: loader 5s cubic-bezier(0, 0, 0.13, -0.83);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 0;
+     
+    
+/*propriétés du cercle*/
+    &__cercle
+        {
+            margin: auto;
+            border-top: $haut;
+            border-right: $droite;
+            border-bottom: $bas;
+            border-left: $gauche;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: fixed;
+            width: 150px;
+            height: 150px;
+            opacity: 0;
+            z-index: 1;
+            animation: spin 4s ;
+        }
+
+        
+        
+        /* cercle */
+        @keyframes spin {
+
+            1% {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.1);
+                z-index: 101;    
+                background-color:$couleur-loader;
+            }
+            
+          10%{
+             opacity:0.9;
+             transform:rotate(10deg) scale(0.2);
+            background-color:$couleur-secondaire;
+          }
+
+
+            20%{
+                opacity:0.8;
+                transform: rotate(30deg) scale(0.3);
+              background-color:$couleur-primaire;
+            }
+
+            40%{
+              opacity:0.9;
+                transform:rotate(90deg) scale(0.5);
+             background-color:$couleur-tertiaire;
+              }
+   
+        60%{
+        opacity:1;
+        transform:rotate(270deg) scale(1);
+          background-color:$couleur-primaire;
+        }
+            
+          70%{
+        opacity:0.8;
+        transform:rotate(400deg) scale(2);
+          background-color:$couleur-secondaire;
+          }
+
+          80%{
+            opacity:0.7;
+            transform:rotate(800deg) scale(3);
+              background-color:$couleur-primaire;
+                }
+              90%{
+                opacity:0.4;
+                transform:rotate(1600deg) scale(2.5);
+                  background-color:$couleur-fond;
+                 }
+
+
+            100% {
+                transform: rotate(360deg) scale(1);
+                opacity: 0;
+                background-color:$couleur-fond;
+            }   
+        }  
+     
+    /* page temporaire */
+    @keyframes loader {
+
+        1% { 
+            background:$couleur-fond;
+
+            z-index: 100;
+            width: 100%;
+            height: 100%;  
+            opacity:1;
+        }
+
+        
+       
+        60% {
+            opacity: 0.9;
+        }
+
+        
+        
+        85% {
+            opacity: 0.6;
+        }
+
+        95% {
+            opacity: 0.4; 
+        }
+        
+       100% {
+            opacity: 0;        
+        }
+    }
+}
+     
+        

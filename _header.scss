@@ -1,0 +1,33 @@
+/*header commun à toutes les pages*/
+
+header{
+    text-align:center;
+    position:relative;
+    height:auto;
+    
+    h1{
+    padding-top:10px;
+    padding-bottom:5px;
+    display:inline-block;
+    
+    &:hover{
+    transform:scale(1.15);
+    transition:350ms;
+    }
+      }
+    & .fleche-reglage{
+    position:absolute;
+    top:13px;
+    left:20px;
+    }
+    
+    & .fas.fa-arrow-left{
+    font-size:30px;
+    color:black;
+    
+    &:hover{
+    transform:scale(1.25);
+    transition:250ms;
+    }
+     }
+      }

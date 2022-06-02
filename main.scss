@@ -1,0 +1,25 @@
+@import "pages/reset.scss";
+@import "utils/mixins";
+@import "utils/variables";
+@import "utils/loader";
+@import "utils/animations";
+
+@import "base/typography";
+
+@import "base/base";
+@import "pages/menus";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/accueil-mediaQ";
+@import "layouts/footer-mediaQ";
+@import "pages/menus-mediaQ";
+
+
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
+
+
+
+
+
