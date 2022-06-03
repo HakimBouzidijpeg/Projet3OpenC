@@ -4,8 +4,7 @@
   "description": "projet3OpenClassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/scss/main.scss:./sass/css/styles.css",
-    "prefix": "postcss ./sass/css/styles.css  --use autoprefixer -d ./sass/css/prefixed/" 
+    "sass": "sass --watch ./sass/scss/main.scss:./sass/css/styles.css"
   },
   "repository": {
     "type": "git",
@@ -13,7 +12,6 @@
   },
   "author": "",
   "license": "ISC",
-  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/HakimBouzidijpeg/Projet3OpenC/issues"
   },

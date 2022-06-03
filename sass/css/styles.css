@@ -60,7 +60,6 @@ table {
 /*MIXIN pour la section fonctionnement*/
 /*mixin pour menu.scss*/
 /*page d'accueil*/
-/*police*/
 /*couleur de fond des bandes de la page d'accueil*/
 /*bande au dessus*/
 /*fond des cartes*/
@@ -68,7 +67,7 @@ table {
 /*couleur et ombre des icônes de fonctionnement*/
 /*bouton "explorez nos restaurants"*/
 /* PAGE MENU*/
-/*traits sous :entrées, plats et désserts*/
+/*traits dans la carte du menu sous : entrées, plats et desserts*/
 /*fond et couleur des boutons span "nouveau"*/
 /*ombre des boutons menu*/
 /*couleurs de la charte pour site et loader*/
@@ -76,8 +75,9 @@ table {
 /*couleur des boutons ronds + loader*/
 /* couleur de fond des span "nouveau" + 
 traits des menus + loader*/
-/*couleurs supplémentaires pour le loader*/
+/*loader*/
 /*border pour loader*/
+/*police*/
 /* LOADER  */
 .loader {
   /* Configuration de la page temporaire pour le loader */
@@ -96,7 +96,7 @@ traits des menus + loader*/
   border-top: 4px solid #9356DC;
   border-right: 4px solid #FF79DA;
   border-bottom: 4px solid #99E2D0;
-  border-left: 4px solid rgb(209, 209, 80);
+  border-left: 4px solid linear-gradient(to top, #f2f0f5, #d1a1c3);
   border-radius: 50%;
   top: 0;
   left: 0;
@@ -114,52 +114,52 @@ traits des menus + loader*/
     opacity: 0;
     transform: rotate(0deg) scale(0.1);
     z-index: 101;
-    background-color: rgb(209, 209, 80);
+    background: linear-gradient(to top, #f2f0f5, #d1a1c3);
   }
   10% {
     opacity: 0.9;
     transform: rotate(10deg) scale(0.2);
-    background-color: #FF79DA;
+    background: #FF79DA;
   }
   20% {
     opacity: 0.8;
     transform: rotate(30deg) scale(0.3);
-    background-color: #9356DC;
+    background: #9356DC;
   }
   40% {
     opacity: 0.9;
     transform: rotate(90deg) scale(0.5);
-    background-color: #99E2D0;
+    background: #99E2D0;
   }
   60% {
     opacity: 1;
     transform: rotate(270deg) scale(1);
-    background-color: #9356DC;
+    background: #9356DC;
   }
   70% {
     opacity: 0.8;
     transform: rotate(400deg) scale(2);
-    background-color: #FF79DA;
+    background: #FF79DA;
   }
   80% {
     opacity: 0.7;
     transform: rotate(800deg) scale(3);
-    background-color: #9356DC;
+    background: #9356DC;
   }
   90% {
     opacity: 0.4;
     transform: rotate(1600deg) scale(2.5);
-    background-color: rgb(250, 243, 243);
+    background: linear-gradient(to top, rgb(235, 228, 228), white);
   }
   100% {
     transform: rotate(360deg) scale(1);
     opacity: 0;
-    background-color: rgb(250, 243, 243);
+    background-color: linear-gradient(to top, rgb(235, 228, 228), white);
   }
 }
 @keyframes loader {
   1% {
-    background: rgb(250, 243, 243);
+    background: linear-gradient(to top, rgb(235, 228, 228), white);
     z-index: 100;
     width: 100%;
     height: 100%;
@@ -201,6 +201,32 @@ traits des menus + loader*/
     width: 30px;
   }
 }
+/*
+  @-webkit-keyframes check {
+    0% {
+
+      -webkit-width: 100px;
+              width: 100px;
+              color:white;
+    }
+    100% {  
+    -webkit-width: 30px;
+              width: 30px;
+    }
+  }
+  @keyframes check {
+    0% {
+      -webkit-width: 100px;
+              width: 100px;
+              color:white;
+    }
+    100% {
+      -webkit-width: 30px;
+              width: 30px;
+    }
+  }
+
+*/
 /* Animation des menus de cartes  */
 .menus main-menu {
   animation: 0.8s ease-in-out apparing-contenu-menus;
@@ -225,9 +251,7 @@ traits des menus + loader*/
 .menus .carte {
   /* Fin de l'animation des menus de cartes  */
 }
-.menus .carte .entree1,
-.menus .carte .plat1,
-.menus .carte .dessert1 {
+.menus .carte .entree1, .menus .carte .plat1, .menus .carte .dessert1 {
   animation: 2.5s ease-in-out apparing-contenu-plat_one;
 }
 @keyframes apparing-contenu-plat_one {
@@ -241,9 +265,7 @@ traits des menus + loader*/
     opacity: 1;
   }
 }
-.menus .carte .entree2,
-.menus .carte .plat2,
-.menus .carte .dessert2 {
+.menus .carte .entree2, .menus .carte .plat2, .menus .carte .dessert2 {
   animation: 3s ease-in-out apparing-contenu-plat_two;
 }
 @keyframes apparing-contenu-plat_two {
@@ -257,9 +279,7 @@ traits des menus + loader*/
     opacity: 1;
   }
 }
-.menus .carte .entree3,
-.menus .carte .plat3,
-.menus .carte .dessert3 {
+.menus .carte .entree3, .menus .carte .plat3, .menus .carte .dessert3 {
   animation: 3.5s ease-in-out apparing-contenu-plat_tree;
 }
 @keyframes apparing-contenu-plat_tree {
@@ -274,9 +294,9 @@ traits des menus + loader*/
   }
 }
 .menus .carte .entree4 {
-  animation: 4s ease-in-out apparing-contenu-plat_four;
+  animation: 4s ease-in-out apparing-contenu-plat_tree;
 }
-@keyframes apparing-contenu-plat_four {
+@keyframes apparing-contenu-plat_tree {
   1% {
     opacity: 0;
   }
@@ -293,18 +313,19 @@ html {
   font-family: "Roboto";
 }
 
-/*présentation de la page accueil*/
+/*présentation de la page*/
+/*body*/
 @media all and (min-width: 1200px) {
   body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /**/
-  }
-  body .page-format {
-    width: 100%;
+    /*align-items: center;*/
   }
 }
+.page-format {
+  width: 100%;
+}
+
 /*liens et images du site*/
 a {
   text-decoration: none;
@@ -322,13 +343,16 @@ img {
 .accueil {
   /* section info  */
   /*section fonctionnement*/
-  /* Main */
+  /* Fin de la section 2 */
+  /* Main == BACKGROUND COLOR AND MARGING */
   /* Début section 3 */
+  /* Gestion du H2 de l'id RESTAURANT */
   /*articles de l'index)  */
 }
 .accueil form {
   background-color: rgb(234, 234, 234);
-  /*border-top: $couleur-tertiaire;*/
+  border-top: form-bordure;
+  /*$border-form!important*/
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -482,7 +506,8 @@ img {
   background: white;
   height: 250px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 1, 0.3215686275);
-  /* Ajout de la mixin pour le h3 (valeur ajoutée dans les parenthèses (margin-top) )*/
+  /* Ajout de la mixin pour le h3 (valeur ajoutée dans les parenthèses (margin-top) */
+  /* Fin de la mixin */
 }
 .accueil .article1 img,
 .accueil .article2 img {
@@ -841,13 +866,11 @@ footer li .footer-marge2 {
   font-weight: bold;
   margin-left: 5px;
 }
-footer a,
-footer h2 {
+footer a, footer h2 {
   color: white;
   display: inline-block;
 }
-footer a:hover,
-footer h2:hover {
+footer a:hover, footer h2:hover {
   color: #99E2D0;
   cursor: pointer;
 }
@@ -905,12 +928,10 @@ footer h2:hover {
     margin-left: 0px;
     left: 0px;
   }
-  .accueil #restaurants .article1,
-.accueil #restaurants .article2 {
+  .accueil #restaurants .article1, .accueil #restaurants .article2 {
     width: 80%;
   }
-  .accueil #restaurants .article1:hover,
-.accueil #restaurants .article2:hover {
+  .accueil #restaurants .article1:hover, .accueil #restaurants .article2:hover {
     transform: scale(1.05);
     transition: 300ms;
   }
@@ -951,8 +972,7 @@ footer h2:hover {
     bottom: 0;
     text-align: center;
   }
-  .accueil #restaurants .article1,
-.accueil #restaurants .article2 {
+  .accueil #restaurants .article1, .accueil #restaurants .article2 {
     width: 46%;
     margin-top: 100px;
     margin-left: 30px;
@@ -969,8 +989,7 @@ footer h2:hover {
     justify-content: center;
     flex-wrap: wrap;
   }
-  footer .fa,
-footer .fas {
+  footer .fa, footer .fas {
     font-size: 1.1rem;
   }
   footer h2 {
@@ -1007,7 +1026,7 @@ footer .fas {
     width: 1200px;
   }
   .menus .main_menu .carte_entree {
-    width: 30% !important;
+    width: 30%;
   }
   .menus .main_menu .carte_plat {
     width: 30%;
@@ -1050,5 +1069,6 @@ footer .fas {
     width: auto;
   }
 }
+/*formulaire*/
 
 /*# sourceMappingURL=styles.css.map */

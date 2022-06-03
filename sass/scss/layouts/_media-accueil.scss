@@ -1,0 +1,139 @@
+/* Version tablette et desktop de l'index */
+.accueil {
+
+    /* Début du mediaqueries 426px */
+     @media all and (min-width: 426px )   {
+    
+      /* section info  */
+         
+      
+         .section-info
+         {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            h2
+            {
+                width: initial!important;
+                padding-left: 0px!important;
+            }
+            h3
+            {
+                width: 90%!important;
+            }
+         }
+          /* Fin section info */
+    
+          /* section fonctionnement  */
+         .section-fonctionnement
+         {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+    
+             h2
+             {
+               padding-left: 0px!important;
+             }
+             ul {
+    
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: space-around;
+             }   
+         }
+           /* Fin section fonctionnement  */
+    
+           /* Début section restaurants */
+     #restaurants
+     {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        h2 
+        {
+           margin-left: 0px;
+           left: 0px;
+        }
+    
+        .article1 , .article2{
+            width: 80%;
+    
+              &:hover
+              {
+                    transform: scale(1.05);
+                    transition: 300ms;
+              }
+        }
+              img 
+              {
+                   width: 100%;
+              }
+     }  
+    } 
+    /* Fin de la section restaurants */
+    /* Fin mediaqueries 426px */
+    
+    /* Début de la mediaqueries de 768px */
+       @media all and (min-width: 768px)
+     {
+      
+       .section-fonctionnement
+       {
+        ol 
+        {
+        
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+         }
+       }
+    }
+       /* Fin 768px */
+    
+       /* Début mediaqueries de 1200px */
+       @media all and (min-width: 1200px)
+       {
+         /* Début main de la page */
+          main 
+           {
+               position: relative;
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+           }
+          
+           /* Début de la section restaurant */
+           #restaurants
+           {
+               flex-direction: row;
+               position: relative;
+    
+             h2
+             {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                text-align: center;
+               
+             }
+    
+             & .article1 , .article2
+             {
+                width: 46%;
+                margin-top: 100px;
+                margin-left: 30px;
+             }
+        }
+       /* Fin du main */
+     } 
+    /* Fin de la mediaqueries de 1200px */
+    }
+    /* Fin de la première page  */
