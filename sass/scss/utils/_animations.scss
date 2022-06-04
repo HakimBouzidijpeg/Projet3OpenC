@@ -30,53 +30,6 @@
   }
 }
 
-/*
-  @-webkit-keyframes check {
-    0% {
-        
-      -webkit-width: 100px;
-              width: 100px;
-              color:white;
-    }
-    100% {  
-    -webkit-width: 30px;
-              width: 30px;
-    }
-  }
-  @keyframes check {
-    0% {
-      -webkit-width: 100px;
-              width: 100px;
-              color:white;
-    }
-    100% {
-      -webkit-width: 30px;
-              width: 30px;
-    }
-  }
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Animation des menus de cartes  */
 
@@ -153,8 +106,8 @@ main-menu {
          }
     }
      .entree4{
-         animation: 4s ease-in-out apparing-contenu-plat_tree ;
-         @keyframes apparing-contenu-plat_tree {
+         animation: 4s ease-in-out apparing-contenu-plat_four;
+         @keyframes apparing-contenu-plat_four {
              1% {
                 opacity: 0;
              }
@@ -166,7 +119,7 @@ main-menu {
              }
          }
     }
-     /* Fin de l'animation des menus de cartes  */
+     
    
  }
   }

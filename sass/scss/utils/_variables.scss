@@ -13,7 +13,7 @@ $fond-footer:#353232;
 
 
 /*couleur et ombre des icônes de fonctionnement*/
-
+$bouton-commandez:linear-gradient(to top, #9256dc, #ff79d9);
 $bouton-ombre-hover:3px 3px 6px 6px rgb(63, 48, 48);   /*bouton "explorez nos restaurants"*/
 $icone-couleur: #939393;
 $couleur-chiffre: #fafafa;
@@ -39,7 +39,7 @@ $bouton-couleur: #278870;
 
 $ombre: 4px 4px 12px #bfbfbf;
 
-
+$cartouche-prix:rgb(153, 226, 208);
 
 
 /*couleurs de la charte pour site et loader*/
@@ -51,9 +51,9 @@ $couleur-primaire: #9356DC;
 $couleur-tertiaire: #99E2D0;
 /* couleur de fond des span "nouveau" + 
 traits des menus + loader*/
-$couleur-loader: linear-gradient(to top, #f2f0f5, #d1a1c3);
+$couleur-loader: rgb(207, 174, 200);
 /*loader*/
-$couleur-fond: linear-gradient(to top, rgb(235, 228, 228), white);
+$couleur-fond:white;
 
 /*border pour loader*/
 

@@ -4,8 +4,7 @@
 @mixin bouton{
     display:inline-block;
     color:white;
-    background:linear-gradient(to top, #9256dc, #ff79d9);
-    /*box-shadow:$ombre-over;*/
+    background:$bouton-commandez;
     border-radius:30px 30px;
     font-weight:bold;
     margin-top:20px;

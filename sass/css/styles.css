@@ -96,7 +96,7 @@ traits des menus + loader*/
   border-top: 4px solid #9356DC;
   border-right: 4px solid #FF79DA;
   border-bottom: 4px solid #99E2D0;
-  border-left: 4px solid linear-gradient(to top, #f2f0f5, #d1a1c3);
+  border-left: 4px solid rgb(207, 174, 200);
   border-radius: 50%;
   top: 0;
   left: 0;
@@ -114,7 +114,7 @@ traits des menus + loader*/
     opacity: 0;
     transform: rotate(0deg) scale(0.1);
     z-index: 101;
-    background: linear-gradient(to top, #f2f0f5, #d1a1c3);
+    background: rgb(207, 174, 200);
   }
   10% {
     opacity: 0.9;
@@ -149,17 +149,17 @@ traits des menus + loader*/
   90% {
     opacity: 0.4;
     transform: rotate(1600deg) scale(2.5);
-    background: linear-gradient(to top, rgb(235, 228, 228), white);
+    background: white;
   }
   100% {
     transform: rotate(360deg) scale(1);
     opacity: 0;
-    background-color: linear-gradient(to top, rgb(235, 228, 228), white);
+    background-color: white;
   }
 }
 @keyframes loader {
   1% {
-    background: linear-gradient(to top, rgb(235, 228, 228), white);
+    background: white;
     z-index: 100;
     width: 100%;
     height: 100%;
@@ -201,32 +201,6 @@ traits des menus + loader*/
     width: 30px;
   }
 }
-/*
-  @-webkit-keyframes check {
-    0% {
-
-      -webkit-width: 100px;
-              width: 100px;
-              color:white;
-    }
-    100% {  
-    -webkit-width: 30px;
-              width: 30px;
-    }
-  }
-  @keyframes check {
-    0% {
-      -webkit-width: 100px;
-              width: 100px;
-              color:white;
-    }
-    100% {
-      -webkit-width: 30px;
-              width: 30px;
-    }
-  }
-
-*/
 /* Animation des menus de cartes  */
 .menus main-menu {
   animation: 0.8s ease-in-out apparing-contenu-menus;
@@ -247,9 +221,6 @@ traits des menus + loader*/
     opacity: 1;
     transform: scale(1);
   }
-}
-.menus .carte {
-  /* Fin de l'animation des menus de cartes  */
 }
 .menus .carte .entree1, .menus .carte .plat1, .menus .carte .dessert1 {
   animation: 2.5s ease-in-out apparing-contenu-plat_one;
@@ -294,9 +265,9 @@ traits des menus + loader*/
   }
 }
 .menus .carte .entree4 {
-  animation: 4s ease-in-out apparing-contenu-plat_tree;
+  animation: 4s ease-in-out apparing-contenu-plat_four;
 }
-@keyframes apparing-contenu-plat_tree {
+@keyframes apparing-contenu-plat_four {
   1% {
     opacity: 0;
   }
@@ -351,8 +322,6 @@ img {
 }
 .accueil form {
   background-color: rgb(234, 234, 234);
-  border-top: form-bordure;
-  /*$border-form!important*/
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -399,7 +368,6 @@ img {
   display: inline-block;
   color: white;
   background: linear-gradient(to top, #9256dc, #ff79d9);
-  /*box-shadow:$ombre-over;*/
   border-radius: 30px 30px;
   font-weight: bold;
   margin-top: 20px;
@@ -744,7 +712,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0 7px;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
   cursor: pointer;
   width: auto;
   /*370px*/
@@ -792,7 +760,6 @@ img {
   display: inline-block;
   color: white;
   background: linear-gradient(to top, #9256dc, #ff79d9);
-  /*box-shadow:$ombre-over;*/
   border-radius: 30px 30px;
   font-weight: bold;
   margin-top: 20px;
@@ -899,8 +866,8 @@ footer a:hover, footer h2:hover {
     align-items: center;
   }
   .accueil .section-info h2 {
-    width: initial !important;
-    padding-left: 0px !important;
+    width: initial;
+    padding-left: 0px;
   }
   .accueil .section-info h3 {
     width: 90% !important;
@@ -1026,7 +993,7 @@ footer a:hover, footer h2:hover {
     width: 1200px;
   }
   .menus .main_menu .carte_entree {
-    width: 30%;
+    width: 30% !important;
   }
   .menus .main_menu .carte_plat {
     width: 30%;
@@ -1069,6 +1036,5 @@ footer a:hover, footer h2:hover {
     width: auto;
   }
 }
-/*formulaire*/
 
 /*# sourceMappingURL=styles.css.map */
